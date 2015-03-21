@@ -12,7 +12,7 @@ var root       = process.cwd();
 var tmp        = require('tmp-sync');
 var tmproot    = path.join(root, 'tmp');
 
-describe('Acceptance: ember install:addon', function() {
+describe('Acceptance: ember install', function() {
   var tmpdir;
 
   before(function() {
@@ -45,7 +45,7 @@ describe('Acceptance: ember install:addon', function() {
   }
 
   function installAddon(args) {
-    var generateArgs = ['install:addon'].concat(args);
+    var generateArgs = ['install'].concat(args);
 
     return initApp().then(function() {
       return ember(generateArgs);
